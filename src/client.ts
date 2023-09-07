@@ -15,6 +15,7 @@ export class MirrorClient extends Client {
       this.loadMirrors();
 
       this.on("ready", () => this.onReady());
+      this.on("raw", (data) => console.log(JSON.stringify(data)));
       this.on("messageCreate", message => this.onMessageCreate(message));
       this.on("messageUpdate", (oldMessage, newMessage) => this.onMessageUpdate(oldMessage, newMessage));
    }
