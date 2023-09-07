@@ -54,7 +54,7 @@ export class MirrorClient extends Client {
    }
 
    private isMirrorableMessage(message: Message): boolean {
-      return !isSystemMessage(message) && !isDirectMessage(message) && !isVisibleOnlyByClient(message);
+      return !isSystemMessage(message) && !isVisibleOnlyByClient(message);
    }
 
    private logMirroredMessage(message: Message): void {
